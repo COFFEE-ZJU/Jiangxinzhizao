@@ -2,7 +2,7 @@
   <div class="post" {{attributes}}>
     <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
     <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h3><a href="{{pathFor 'postPage'}}">{{title}}</a><span>{{description}}</span></h3>
       <p>
         {{pluralize votes "Vote"}},
         submitted by {{author}},
@@ -12,4 +12,9 @@
     </div>
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
   </div>
+    {{#if dispContent}}
+        <div>
+          <p><pre>{{content}}</pre></p>
+        </div>
+    {{/if}}
 </template>
