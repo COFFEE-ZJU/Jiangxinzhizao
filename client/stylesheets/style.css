@@ -162,3 +162,20 @@ body {
   margin-bottom: 5px;
   pointer-events: auto;
 }
+
+.account_avatar {
+    text-align: center;
+    width:400;
+    height:400;
+
+    margin-bottom: 25px;
+    margin-top: 75px;
+}
+
+
+.account_accountName {
+    text-align: center;
+    margin-bottom: 100px;
+
+    font-size:250%;
+}
