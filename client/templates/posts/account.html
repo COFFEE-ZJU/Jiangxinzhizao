@@ -3,6 +3,11 @@
 
     {{> accountAvatar}}
 
+    <div>published:</div>
+
+
+
+    <!-- {{> PublishedItem}} -->
 
 	<div class="published">
     	{{#each publishWithRank}}
@@ -19,8 +24,25 @@
 	</div>
 
 
-    <!-- {{> PublishedItem}} -->
     
-    <!-- {{> RecommendedItem}}	-->
+    <!-- {{> RecommendedItem}}  -->
+
+    <div>Recommended:</div>
+
+    <div class="published">
+        {{#each publishWithRank}}
+          {{> postItem}}
+        {{/each}}
+    
+        {{#if nextPath}}
+           <a class="load-more" href="{{nextPath}}">Load more</a>
+        {{else}}
+          {{#unless ready}}
+           {{> spinner}}
+         {{/unless}}
+        {{/if}}
+    </div>
+
+
 
 </template>
