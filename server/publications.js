@@ -6,6 +6,11 @@ Meteor.publish('posts', function(options) {
   return Posts.find({}, options);
 });
 
+Meteor.publish('ownerPosts', function(userId){
+  check(userId, String);
+  return Posts.find({userId: userId});
+});
+
 Meteor.publish('singlePost', function(id) {
   check(id, String);
   return Posts.find(id);
