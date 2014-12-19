@@ -176,6 +176,30 @@ body {
 .account_accountName {
     text-align: center;
     margin-bottom: 100px;
-
     font-size:250%;
 }
+
+
+.itemAccount{
+    list-style:none;
+    display:block;
+    font-size:100%;
+
+    margin-right: 0px;
+}
+
+
+.itemAccount_icon{
+    float:right;
+    
+   
+}
+
+
+.itemAccount_username{
+    float:right;
+    font-size:100%;
+    padding-top:  5px;
+    padding-bottom: 0px;
+}
+

@@ -31,6 +31,8 @@ Template.postItem.helpers({
       Positions.upsert({postId: post._id}, {$set: {position: newPosition}})
     });
     
+    
+    
     return attributes;
   }
 });
