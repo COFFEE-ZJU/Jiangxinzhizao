@@ -6,9 +6,9 @@ Meteor.publish('posts', function(options) {
   return Posts.find({}, options);
 });
 
-Meteor.publish('ownerPosts', function(userId){
+Meteor.publish('relatedPosts', function(userId){
   check(userId, String);
-  return Posts.find({userId: userId});
+  return Posts.find({$or: [{userId: userId}, {upvoters: userId}]});
 });
 
 Meteor.publish('singlePost', function(id) {
