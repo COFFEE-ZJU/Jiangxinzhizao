@@ -18,12 +18,14 @@
           <li class="itemAccount_username">
             <div class="itemAccount_username" >  
                <!-- {{itemAccount}} -->
-            {{author}}
+            <a href="{{pathFor route='accountShow' userId=userId }}">{{author}}</a>
             </div>
           </li>
 
           <li class="itemAccount_icon">
-            <img src="/logo.jpg" width="40" height="40"/>
+              <a href="{{pathFor route='accountShow' userId=userId }}">
+                  <img src="/logo.jpg" width="40" height="40"/>
+              </a>
           </li>
           
     </ul>

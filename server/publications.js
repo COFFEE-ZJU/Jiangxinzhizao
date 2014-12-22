@@ -25,3 +25,8 @@ Meteor.publish('comments', function(postId) {
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId, read: false});
 });
+
+Meteor.publish('userInfo', function(userId){
+  check(userId, String);
+  return Meteor.users.find({_id: userId});
+});
